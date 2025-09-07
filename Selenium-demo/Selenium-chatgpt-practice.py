@@ -13,7 +13,7 @@ wait = WebDriverWait(driver, 10)
 def test_checkboxes():
     driver.get("https://the-internet.herokuapp.com/checkboxes")
     checkboxes = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "input[type='checkbox']")))
-    time.sleep(5)
+    time.sleep(3)
     for checkbox in checkboxes:
         if not checkbox.is_selected():
             checkbox.click()
